@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #121212;
+}
+
+@media (max-width: 768px) {
+  .p-toast {
+    width: unset !important;
+  }
+
+  .p-card .p-card-content {
+    padding: 0.75rem;
+  }
+
+  .p-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .p-inputtext {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.75rem;
+  }
+
+  .p-datatable .p-datatable-thead > tr > th {
+    padding: 0.75rem;
+  }
+}
