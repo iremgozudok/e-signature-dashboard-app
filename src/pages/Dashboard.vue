@@ -157,20 +157,32 @@ const closePreviewModal = () => {
 
 const downloadFile = (file: TimestampedFile) => {
   if (file.fileContent) {
-    const blob = new Blob([file.fileContent], { type: "application/pdf" });
-    const url = URL.createObjectURL(blob);
+    try {
+      const base64Data = file.fileContent.replace(
+        /^data:application\/pdf;base64,/,
+        ""
+      );
+      const binaryString = atob(base64Data);
+      const bytes = new Uint8Array(binaryString.length);
 
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = file.name || "download.pdf";
+      for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    URL.revokeObjectURL(url);
-
-    success($t("toast.fileDownloaded"));
+      const blob = new Blob([bytes], { type: "application/pdf" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = file.name || "download.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      success($t("toast.fileDownloaded"));
+    } catch (err) {
+      console.error("Dosya indirme hatası:", err);
+      error($t("toast.fileDownloadError"));
+    }
   } else {
     error($t("toast.fileContentNotFound"));
   }
