@@ -254,7 +254,7 @@ interface Recipient {
 }
 
 const { t: $t } = useI18n();
-const { success, error } = useToast();
+const { success } = useToast();
 const confirm = useConfirm();
 const recipients = ref<Recipient[]>([]);
 
@@ -373,29 +373,24 @@ const closeModal = () => {
 
 const saveRecipient = () => {
   formSubmitted.value = true;
-
   if (
     !formData.recipientName ||
     !formData.subject ||
     !formData.to ||
     !formData.message
   ) {
-    error($t("recipients.requiredFieldsMissing"));
     return;
   }
 
   if (!isValidEmail(formData.to)) {
-    error($t("recipients.invalidEmailFormat"));
     return;
   }
 
   if (includeCC.value && formData.cc && !isValidEmail(formData.cc)) {
-    error($t("recipients.invalidEmailFormat"));
     return;
   }
 
   if (includeBCC.value && formData.bcc && !isValidEmail(formData.bcc)) {
-    error($t("recipients.invalidEmailFormat"));
     return;
   }
 
