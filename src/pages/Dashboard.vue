@@ -157,12 +157,18 @@ const closePreviewModal = () => {
 
 const downloadFile = (file: TimestampedFile) => {
   if (file.fileContent) {
+    const blob = new Blob([file.fileContent], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
+
     const link = document.createElement("a");
-    link.href = file.fileContent;
-    link.download = file.name;
+    link.href = url;
+    link.download = file.name || "download.pdf";
+
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
 
     success($t("toast.fileDownloaded"));
   } else {
