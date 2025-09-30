@@ -27,7 +27,7 @@
           <div
             class="rounded-2xl bg-[#B58CFF] flex items-center justify-center"
           >
-            <Image src="/src/assets/logo.png" alt="logo" width="100" />
+            <Image src="/logo.png" alt="logo" width="100" />
           </div>
 
           <div
@@ -54,7 +54,7 @@
 
       <div class="flex flex-col justify-center items-center h-full">
         <div class="mb-10 bg-[#B58CFF] px-10 py-5 rounded-2xl lg:hidden">
-          <Image src="/src/assets/logo.png" alt="logo" width="100" />
+          <Image src="/logo.png" alt="logo" width="100" />
         </div>
         <div class="card">
           <Tabs value="0">

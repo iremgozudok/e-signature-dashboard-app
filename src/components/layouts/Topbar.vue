@@ -10,7 +10,7 @@
         <i class="pi pi-bars text-lg"></i>
       </button>
       <img
-        src="/src/assets/logo.png"
+        src="/logo.png"
         alt="Logo"
         class="h-8 w-auto mr-3 cursor-pointer hover:opacity-80 transition-opacity"
         @click="goToDashboard"
