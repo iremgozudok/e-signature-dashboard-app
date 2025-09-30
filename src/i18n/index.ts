@@ -186,6 +186,7 @@ const tr = {
     deleteConfirm: "adlı alıcıyı silmek istediğinize emin misiniz?",
     deleteWarning: "Bu işlem geri alınamaz.",
     invalidEmailFormat: "Geçerli bir e-posta adresi giriniz (örn: kullanici@example.com)",
+    requiredFieldsMissing: "Lütfen tüm zorunlu alanları doldurunuz.",
   },
   support: {
     subject: "Konu",
@@ -455,6 +456,7 @@ const en = {
     deleteConfirm: "are you sure you want to delete the recipient?",
     deleteWarning: "This action cannot be undone.",
     invalidEmailFormat: "Please enter a valid email address (e.g: user@example.com)",
+    requiredFieldsMissing: "Please fill in all required fields.",
   },
   support: {
     subject: "Subject",
