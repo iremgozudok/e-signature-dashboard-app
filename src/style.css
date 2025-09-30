@@ -11,6 +11,56 @@ body {
   background-color: #121212;
 }
 
+.p-datatable-header,
+.p-datatable-header-cell,
+.p-datatable-tbody>tr,
+.p-paginator,
+.p-datatable-tbody>tr>td,
+.p-datatable-paginator-bottom,
+.p-dialog,
+.p-inputtext,
+.p-paginator-page.p-paginator-page-selected,
+.p-select,
+.p-select-label {
+  background: #18181b !important;
+  border-color: #27272a !important;
+}
+
+.p-textarea,
+.p-inputtext,
+.p-tabview {
+  background-color: #18181b !important;
+  border-color: #52525b !important;
+  color: #fff !important;
+}
+
+.p-dialog-content,
+.p-dialog-title {
+  color: #fff !important;
+}
+
+.p-textarea:focus,
+.p-inputtext:focus {
+  border-color: #0bb980 !important;
+}
+
+.p-floatlabel label {
+  color: #d4d4d4 !important;
+  background-color: #18181b !important;
+}
+
+.p-button-secondary {
+  background-color: #27272a !important;
+  color: #fff !important;
+  border-color: #27272a !important;
+}
+
+.p-datatable-column-header-content,
+.p-tab,
+.p-inputtext::placeholder {
+  color: #fff !important;
+}
+
 @media (max-width: 768px) {
   .p-toast {
     width: unset !important;
@@ -32,11 +82,11 @@ body {
 }
 
 @media (min-width: 640px) and (max-width: 1024px) {
-  .p-datatable .p-datatable-tbody > tr > td {
+  .p-datatable .p-datatable-tbody>tr>td {
     padding: 0.75rem;
   }
 
-  .p-datatable .p-datatable-thead > tr > th {
+  .p-datatable .p-datatable-thead>tr>th {
     padding: 0.75rem;
   }
 }

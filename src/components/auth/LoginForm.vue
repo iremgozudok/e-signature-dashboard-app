@@ -67,7 +67,7 @@
                 value="0"
                 class="flex flex-col justify-center items-center h-[400px]"
               >
-                <h3 class="text-3xl font-light mb-10">
+                <h3 class="text-3xl font-light mb-10 text-white">
                   {{ t("login.login") }}
                 </h3>
                 <FloatLabel variant="on" class="mb-5">
@@ -100,10 +100,10 @@
                 >
                   {{ errorMessage }}
                 </div>
-                <a class="hover:underline cursor-pointer text-sm font-light">
+                <a class="hover:underline cursor-pointer text-sm font-light text-white">
                   {{ t("login.forgotPassword") }}
                 </a>
-                <p class="text-sm font-light">
+                <p class="text-sm font-light text-white">
                   {{ t("login.notMember") }}
                   <a class="hover:underline cursor-pointer">{{
                     t("login.register")
@@ -114,7 +114,7 @@
                 value="1"
                 class="flex flex-col justify-center items-center h-[400px]"
               >
-                <p class="mt-5 mb-10 font-light">
+                <p class="mt-5 mb-10 font-light text-white">
                   {{ t("login.signerNotFound") }}
                 </p>
 

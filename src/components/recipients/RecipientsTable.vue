@@ -39,16 +39,8 @@
                 :model-value="globalFilter"
                 @update:model-value="$emit('update:globalFilter', $event || '')"
                 :placeholder="$t('recipients.searchRecipients')"
-                class="w-64 pl-10 pr-10 py-2 bg-zinc-700 border border-zinc-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500"
               />
             </IconField>
-            <button
-              v-if="globalFilter"
-              @click="$emit('update:globalFilter', '')"
-              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-            >
-              <i class="pi pi-times text-sm"></i>
-            </button>
           </div>
         </div>
       </template>

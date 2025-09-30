@@ -349,7 +349,7 @@ const openEditModal = (recipient: Recipient) => {
 const openDeleteModal = (recipient: Recipient) => {
   selectedRecipient.value = recipient;
   confirm.require({
-    message: `${recipient.recipientName} ${$t("modal.deleteRecipientMessage")}`,
+    message: recipient.recipientName + " " + $t("modal.deleteRecipientMessage"),
     header: $t("modal.deleteRecipientTitle"),
     icon: "pi pi-exclamation-triangle",
     acceptLabel: $t("modal.confirmText"),
