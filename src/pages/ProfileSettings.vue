@@ -85,20 +85,12 @@
             }}</small>
           </div>
         </div>
-        <div class="flex gap-4">
+        <div class="flex justify-end mt-5">
           <Button
             type="submit"
             :label="$t('profile.update')"
             severity="primary"
             :loading="isLoading"
-            class="px-8"
-          />
-          <Button
-            type="button"
-            :label="$t('profile.cancel')"
-            severity="secondary"
-            outlined
-            @click="resetForm"
             class="px-8"
           />
         </div>
@@ -208,17 +200,6 @@ const onSubmit = async () => {
   } finally {
     isLoading.value = false;
   }
-};
-
-const resetForm = () => {
-  loadUserData();
-  errors.value = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  };
 };
 
 const loadUserData = () => {
