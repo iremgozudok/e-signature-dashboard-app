@@ -11,4 +11,15 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router', 'pinia'],
+          primevue: ['primevue']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000
+  }
 });

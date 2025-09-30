@@ -48,7 +48,9 @@
 </template>
 
 <script setup lang="ts">
-import VuePdf from "pdf-vue3";
+import { defineAsyncComponent } from "vue";
+
+const VuePdf = defineAsyncComponent(() => import("pdf-vue3"));
 import { useI18n } from "vue-i18n";
 import Dialog from "primevue/dialog";
 import Button from "primevue/button";
